@@ -1,0 +1,16 @@
+/* Layout.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  border-radius: 10px;
+  /* background-color: #eee8e8; */
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

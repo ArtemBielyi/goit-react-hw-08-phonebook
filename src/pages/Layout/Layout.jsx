@@ -1,12 +1,13 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import { Navigation } from 'components/Navigation';
+import { Navigation } from 'components/Navigation/Navigation';
+import css from './Layout.module.css';
 
 export const Layout = () => {
   return (
     <>
-      <div className="container">
-        <header className="header">
+      <div className={css.container}>
+        <header className={css.header}>
           <Navigation />
         </header>
       </div>

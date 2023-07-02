@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
-import { BiPencil } from 'react-icons/bi';
+
+import css from './RegisterForm.module.css';
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -24,14 +25,14 @@ const RegisterForm = () => {
 
   return (
     <main>
-      <section className="section">
-        <div className="container registration">
-          <h2 className="registration__title">Registration</h2>
-          <form className="registration__form" onSubmit={onFormSubmit}>
-            <label className="registration__label">
+      <section className={css.section}>
+        <div className={css.container}>
+          <h2 className={css.registration__title}>Registration</h2>
+          <form className={css.registration__form} onSubmit={onFormSubmit}>
+            <label className={css.registration__label}>
               Username
               <input
-                className="registration__input"
+                className={css.registration__input}
                 type="text"
                 name="name"
                 placeholder="Name"
@@ -40,10 +41,10 @@ const RegisterForm = () => {
                 required
               />
             </label>
-            <label className="registration__label">
+            <label className={css.registration__label}>
               Email
               <input
-                className="registration__input"
+                className={css.registration__input}
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -52,10 +53,10 @@ const RegisterForm = () => {
                 required
               />
             </label>
-            <label className="registration__label">
+            <label className={css.registration__label}>
               Password
               <input
-                className="registration__input"
+                className={css.registration__input}
                 type="password"
                 name="password"
                 placeholder="Password"
@@ -64,9 +65,8 @@ const RegisterForm = () => {
                 required
               />
             </label>
-            <button className="registration__button" type="submit">
+            <button className={css.registration__button} type="submit">
               Register{' '}
-              <BiPencil style={{ verticalAlign: '-3px', paddingLeft: '4px' }} />
             </button>
           </form>
         </div>

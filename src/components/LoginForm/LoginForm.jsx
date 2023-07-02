@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
-import { BiPencil } from 'react-icons/bi';
+
+import css from './LoginForm.module.css';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -22,14 +23,14 @@ const LoginForm = () => {
 
   return (
     <main>
-      <section className="section">
-        <div className="container registration">
-          <h2 className="registration__title">Log in</h2>
-          <form className="registration__form" onSubmit={onFormSubmit}>
-            <label className="registration__label">
+      <section className={css.section}>
+        <div className={css.container}>
+          <h2 className={css.registration__title}>Log in</h2>
+          <form className={css.registration__form} onSubmit={onFormSubmit}>
+            <label className={css.registration__label}>
               Email
               <input
-                className="registration__input"
+                className={css.registration__input}
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -38,10 +39,10 @@ const LoginForm = () => {
                 required
               />
             </label>
-            <label className="registration__label">
+            <label className={css.registration__label}>
               Password
               <input
-                className="registration__input"
+                className={css.registration__input}
                 type="password"
                 name="password"
                 placeholder="Password"
@@ -50,9 +51,8 @@ const LoginForm = () => {
                 required
               />
             </label>
-            <button className="registration__button" type="submit">
+            <button className={css.registration__button} type="submit">
               Log in{' '}
-              <BiPencil style={{ verticalAlign: '-3px', paddingLeft: '4px' }} />
             </button>
           </form>
         </div>

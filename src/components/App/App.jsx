@@ -3,15 +3,16 @@ import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { refreshUser } from 'redux/auth/operations';
 import { selectIsRefreshing } from 'redux/auth/selectors';
-import { Layout } from 'pages/Layout';
-import { PrivateRoute } from './PrivateRoute';
-import { RestrictedRoute } from './RestrictedRoute';
-import { Loader } from './Loader';
+import { Layout } from 'pages/Layout/Layout';
+import { PrivateRoute } from '../PrivateRoute';
+import { RestrictedRoute } from '../RestrictedRoute';
+import { Loader } from '../Loader';
+import css from './App.module.css';
 
-const HomePage = lazy(() => import('../pages/Home'));
-const RegisterPage = lazy(() => import('../pages/Register'));
-const LoginPage = lazy(() => import('../pages/Login'));
-const ContactsPage = lazy(() => import('../pages/Contacts'));
+const HomePage = lazy(() => import('../../pages/Home/Home'));
+const RegisterPage = lazy(() => import('../../pages/Register'));
+const LoginPage = lazy(() => import('../../pages/Login'));
+const ContactsPage = lazy(() => import('../../pages/Contacts/Contacts'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ export const App = () => {
   return isRefreshing ? (
     <Loader />
   ) : (
-    <>
+    <div className={css.container}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -54,6 +55,6 @@ export const App = () => {
           />
         </Route>
       </Routes>
-    </>
+    </div>
   );
 };

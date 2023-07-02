@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from '../redux/contacts/selectors';
-import { addContact } from '../redux/contacts/operations';
+import { getContacts } from '../../redux/contacts/selectors';
+import { addContact } from '../../redux/contacts/operations';
+import css from './ContactForm.module.css';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -32,13 +33,13 @@ export const ContactForm = () => {
   }
 
   return (
-    <div className="contacts">
-      <h2 className="contacts__title">Add new contacts</h2>
-      <form className="contacts__form" onSubmit={onFormSubmit}>
-        <label className="contacts__label">
+    <div className={css.contacts}>
+      <h2 className={css.contacts__title}>Add new contacts</h2>
+      <form className={css.contacts__form} onSubmit={onFormSubmit}>
+        <label className={css.contacts__label}>
           Name
           <input
-            className="contacts__input"
+            className={css.contacts__input}
             type="text"
             name="name"
             placeholder="Name"
@@ -47,10 +48,10 @@ export const ContactForm = () => {
             required
           />
         </label>
-        <label className="contacts__label">
+        <label className={css.contacts__label}>
           Phone
           <input
-            className="contacts__input"
+            className={css.contacts__input}
             type="tel"
             name="number"
             placeholder="Phone number"
@@ -59,7 +60,7 @@ export const ContactForm = () => {
             required
           />
         </label>
-        <button className="contacts__button" type="submit">
+        <button className={css.contacts__button} type="submit">
           Add contact
         </button>
       </form>

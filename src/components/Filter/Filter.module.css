@@ -1,0 +1,37 @@
+/* Filter.module.css */
+
+.filter {
+  margin-bottom: 20px;
+}
+
+.filter__title {
+  margin-bottom: 10px;
+}
+
+.filter__bcg {
+  height: 5px;
+  background-color: #ccc;
+  margin-bottom: 10px;
+}
+
+.filter__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__label {
+  margin-bottom: 10px;
+}
+
+.filter__input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.filter__descr {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}

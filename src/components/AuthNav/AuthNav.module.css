@@ -1,0 +1,17 @@
+/* .header {
+  display: flex;
+  justify-content: end;
+} */
+.navlink {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.navlink:hover {
+  background-color: #f1f1f1;
+}
