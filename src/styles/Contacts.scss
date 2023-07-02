@@ -1,0 +1,79 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+
+  background-color: var(--orange);
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
+
+  @media screen and (min-width: 768px) {
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-size: 24px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 32px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    padding: 16px;
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      padding: 0;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &__input {
+    display: inline-flex;
+    font-family: 'Patrick Hand';
+    font-size: 18px;
+    line-height: 1.33;
+    background-color: var(--bcg-input);
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 18px;
+    line-height: 1.27;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__button {
+    align-items: center;
+    transition: color 250ms var(--timing-function);
+    transition: background-color 250ms var(--timing-function);
+
+    &:hover {
+      color: var(--primary-color);
+      background-color: var(--orange);
+    }
+  }
+
+  &__icon {
+    fill: var(--orange);
+  }
+}

@@ -1,0 +1,78 @@
+.contactsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+
+  background-color: var(--orange);
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
+
+  @media screen and (min-width: 768px) {
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-size: 24px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 32px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 335px;
+    padding: 16px;
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    width: 335px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    font-size: 18px;
+    line-height: 1.27;
+    background-color: var(--bcg-input);
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    height: 38px;
+    padding: 0 6px;
+    align-items: center;
+    color: var(--primary-color);
+    background-color: var(--orange);
+    transition: color 250ms var(--timing-function);
+    transition: background-color 250ms var(--timing-function);
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+
+    &:hover {
+      color: var(--orange);
+      background-color: var(--primary-color);
+    }
+  }
+}
